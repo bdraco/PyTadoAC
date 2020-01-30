@@ -210,7 +210,7 @@ class TadoAC:
         # pylint: disable=C0103
 
         data = self.getState(zone)['sensorDataPoints']
-        return {'temperature' : data['insideTemperature']['celsius'],
+        return {'temperature' : data['insideTemperature']['fahrenheit'],
                 'humidity'    : data['humidity']['percentage']}
 
     def getWeather(self):
@@ -270,7 +270,7 @@ class TadoAC:
                 "fanSpeed" : "AUTO",
                 "mode": mode,
                 "temperature":{
-                    "celsius": setTemp
+                    "fahrenheit": setTemp
                 }
             }
         else:
@@ -279,7 +279,7 @@ class TadoAC:
                 "power": power,
                 "fanSpeed" : "AUTO",
                 "temperature":{
-                    "celsius": setTemp
+                    "fahrenheit": setTemp
                 }
             }
 
